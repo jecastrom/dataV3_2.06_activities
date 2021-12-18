@@ -6,6 +6,8 @@ During the lesson, we mentioned that one of the primary reasons for normalizing 
 The students can refer to the following link to read more about normalization, its advantages and disadvantages. (https://whatisdbms.com/normalization-in-dbms-anomalies-advantages-disadvantages/)
 
 
+Answer:
+
 
 *When several instances of the same data are scattered across different tables without proper 
 relationship/link, it can cause strange conditions where some will get updated with new values 
