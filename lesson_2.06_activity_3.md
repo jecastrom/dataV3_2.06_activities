@@ -6,6 +6,11 @@ During the lesson, we mentioned that one of the primary reasons for normalizing 
 The students can refer to the following link to read more about normalization, its advantages and disadvantages. (https://whatisdbms.com/normalization-in-dbms-anomalies-advantages-disadvantages/)
 
 
+
+*When several instances of the same data are scattered across different tables without proper 
+relationship/link, it can cause strange conditions where some will get updated with new values 
+whereas others won't. This leaves our database in an inconsistent state!*
+
 -- 2
 Later in the labs we will use another database that models a DVD rental store. ERD (entity relationship diagram) for the database is shown below. You can refer the file `sakila-schema.pdf` in the files_for_activities folder as well.
 
