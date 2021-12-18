@@ -21,3 +21,9 @@ Later in the labs we will use another database that models a DVD rental store. E
 ### Questions
 
 - Identify the primary keys and foreign keys from the ER diagram.
+
+*Answer:*
+
+[Click here: Primary Keys](https://github.com/jecastrom/dataV3_2.06_activities/blob/master/Sakila%20Primary%20Keys.pdf)
+
+[Click here: Foreign Keys](https://github.com/jecastrom/dataV3_2.06_activities/blob/master/Sakila%20Foreign%20Keys.pdf)
