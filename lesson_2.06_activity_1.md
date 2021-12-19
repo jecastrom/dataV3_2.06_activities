@@ -16,6 +16,7 @@ FROM
 ```
 
 
+
 2. Get transactions in the first 15 days of 1993.
 
 ```sql
