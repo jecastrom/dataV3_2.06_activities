@@ -32,11 +32,14 @@ DELETE FROM
 WHERE
     account_id = 11382;
 ```
-
+ 
       
  
 3. Create the rest of the tables in the `bank` database (at least the `client` and the `card` tables)
 
 4. Design and create a new database structure. Justify your changes.
       - Some ideas include renaming columns to ones that make more sense and, for eg., in the table `district`, adding foreign keys wherever necessary.
+
+
+
 
