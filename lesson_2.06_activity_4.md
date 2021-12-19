@@ -24,7 +24,9 @@ VALUES
 *I was able to insert the values succesfully.*
 
 
-      b. Use the delete command to delete an entry from the table account where the `account_id` is `11382`. Does this result in an error? If it does, then why?
+      b. Use the delete command to delete an entry from the 
+      table account where the `account_id` is `11382`. Does 
+      this result in an error? If it does, then why?
 
 ```sql
 DELETE FROM
