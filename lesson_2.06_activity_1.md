@@ -82,3 +82,4 @@ WHERE
 6. Discuss the possible use cases of using regular expressions in your query.
 
     *MySQL Regular expressions allow us to search data matching even more complex criterion.*
+    ....
