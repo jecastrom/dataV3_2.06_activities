@@ -27,6 +27,8 @@ FROM
 WHERE
     a3 LIKE 'north%M%';
 ```
+![image](https://user-images.githubusercontent.com/63274055/146674746-15bb46e0-82a9-4616-a774-27361d4c9eda.png)
+
 *This query can be used if you are looking for a value which starts with north and has 
 a capital M anywhere after north. This is the reason why the query brings back 
 Noth Bohamia and North Moravia. The % allows you to match any string of any length
@@ -40,6 +42,8 @@ FROM
 WHERE
     a3 LIKE 'north_M%';
 ```
+![image](https://user-images.githubusercontent.com/63274055/146674772-4a3ca43e-ce0c-4223-8e7b-2c853b8b307a.png)
+
 *This query is more granular asking for a value that
 matches north and only one character or anything of the sort but only one
 then a value that starts with capital M and any character after.*
@@ -62,6 +66,8 @@ FROM
 WHERE
     a2 REGEXP '^ch';
 ```
+![image](https://user-images.githubusercontent.com/63274055/146674925-65d786dc-7d85-4ce5-b5b6-1e3267f91c4b.png)
+
 
 
 
