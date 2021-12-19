@@ -62,6 +62,7 @@ then a value that starts with capital M and any character after.*
 select * from bank.district
 where a2 regexp 'ch[e-r]';
 ```
+<br></br>
 
 Can you modify the query to print the rows only for those values in the **A2** column that starts with **'CH'**?
 
