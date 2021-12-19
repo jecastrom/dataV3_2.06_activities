@@ -34,6 +34,10 @@ a capital M anywhere after north. This is the reason why the query brings back
 Noth Bohamia and North Moravia. The % allows you to match any string of any length
 including cero length*
 
+<br></br>
+
+
+
 ```sql
 SELECT
     *
@@ -47,6 +51,9 @@ WHERE
 *This query is more granular asking for a value that
 matches north and only one character or anything of the sort but only one
 then a value that starts with capital M and any character after.*
+
+
+<br></br>
 
 
 2. We looked at the following query in class:
@@ -68,7 +75,7 @@ WHERE
 ```
 ![image](https://user-images.githubusercontent.com/63274055/146674925-65d786dc-7d85-4ce5-b5b6-1e3267f91c4b.png)
 
-
+<br></br>
 
 
 3. Use the table `trans` for this query. Use the column `type` to test: "By default, in an ascending sort, special characters appear first, followed by numbers, and then letters."
