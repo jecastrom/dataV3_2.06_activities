@@ -29,5 +29,6 @@ Later in the labs we will use another database that models a DVD rental store. E
 
 [Sakila Primary Keys.pdf](https://github.com/jecastrom/dataV3_2.06_activities/files/7741626/Sakila.Primary.Keys.pdf)
 [Sakila Foreign Keys.pdf](https://github.com/jecastrom/dataV3_2.06_activities/files/7741627/Sakila.Foreign.Keys.pdf)
+.
 
 
