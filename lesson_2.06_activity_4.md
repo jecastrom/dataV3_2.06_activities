@@ -78,7 +78,8 @@ Second example referes to the "client" table which in my view, had quite a bit o
 ![image](https://user-images.githubusercontent.com/63274055/146821051-e2944240-9872-4fd0-a47e-bb146f8bfa9b.png)
 <br></br>
 
-
+The district table had mix information about geographical locations names such as district, region, client address and statistical demographic data.
+I split all in three different tables. For the 
 
 
 <br></br>
