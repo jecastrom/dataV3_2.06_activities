@@ -42,6 +42,7 @@ WHERE
 4. Design and create a new database structure. Justify your changes.
       - Some ideas include renaming columns to ones that make more sense and, for eg., in the table `district`, adding foreign keys wherever necessary.
 
+# Answer:
 <br></br>
 
 This is the original database bank schema:
