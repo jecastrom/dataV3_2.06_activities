@@ -62,14 +62,22 @@ To start normalizing the database, I have given every column a Primary Key.
 
 * Implemented the use of Foreign Keys which minimises data redundancy as there are many atributes (columns) that are
 and can be used in other tables. Also this avoids having two attributs with the same name.
-For example in ```sql bank.trans.k_symbol``` and ```sql bank.order.k_symbol```, both describle the nature of the transaction, the first its for "transactions" and the second for Direct Debits which in the database are refered as Orders or permanent orders.
+First example: in ```sql bank.trans.k_symbol``` and ```sql bank.order.k_symbol```, both describle the nature of the transaction, the first its for "transactions" and the second for Direct Debits which in the database are refered as Orders or permanent orders.
 
 * The entity "order" has been renamed to "direct_debit", as it is more meaningful as "order" has a implicit congnotation to orders on a online store.
 
-* As the transaction types are quite extensive on both tables, they have created in a different table and the transacion types and direct debit types are now
-* reffered onto the transactions and direct_debit tables by Foreign Keys.
+* As the transaction types are quite extensive on both tables, I have created them in different tables and the transacion types and direct debit types are now
+referenced onto the transactions and direct_debit tables by a Foreign Key. This also avoids violating the 2dn normal rule "having data that does not depend on the key of the
+column"
 
 ![image](https://user-images.githubusercontent.com/63274055/146813980-0fc1af9d-96fe-4e84-b9f3-4ded5180c242.png)
+<br></br>
+
+Second example referes to the "client" table which in my view, had quite a bit of room for improvement:
+<br></br>
+![image](https://user-images.githubusercontent.com/63274055/146821051-e2944240-9872-4fd0-a47e-bb146f8bfa9b.png)
+<br></br>
+
 
 
 
