@@ -69,7 +69,7 @@ For example in ```sql bank.trans.k_symbol``` and ```sql bank.order.k_symbol```, 
 * As the transaction types are quite extensive on both tables, they have created in a different table and the transacion types and direct debit types are now
 * reffered onto the transactions and direct_debit tables by Foreign Keys.
 
-![transactions and order pic befire and after](https://user-images.githubusercontent.com/63274055/146811466-6816fa48-d011-49ec-9c33-cbb2b4e94904.png)
+![image](https://user-images.githubusercontent.com/63274055/146812914-cfc29fe8-c72a-4d30-8164-bd51985f218a.png)
 
 
 <br></br>
