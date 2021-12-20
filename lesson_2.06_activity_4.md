@@ -44,8 +44,10 @@ WHERE
 
 <br></br>
 
-[Click here to download pdf of new bank database schema](https://github.com/jecastrom/dataV3_2.06_activities/files/7741611/bank_new_schema.pdf)
-![image](https://user-images.githubusercontent.com/63274055/146691126-5c1dbb37-6423-47ed-9cfb-1317f2a10141.png)
+![image](https://user-images.githubusercontent.com/63274055/146738327-10c15009-f1b2-4e39-8a3b-801fea5a69bc.png)
+
+
+
 
 
 
