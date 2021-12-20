@@ -75,14 +75,16 @@ column"
 
 Second example referes to the "client" table which in my view, had quite a bit of room for improvement:
 <br></br>
-![image](https://user-images.githubusercontent.com/63274055/146821051-e2944240-9872-4fd0-a47e-bb146f8bfa9b.png)
+![image](https://user-images.githubusercontent.com/63274055/146824182-821294c7-3865-42f9-ae27-fbddc49601ed.png)
+
 <br></br>
 
 The district table had mix information about geographical locations names such as district, region, client address and statistical demographic data.
-I split all in three different tables. For the 
+I split all in three different tables to avoid data redundancy referencing districs or regions. Now whererever nesesary we can use the Primary key of that table as a Foreign Key in another.
 
 
 <br></br>
+![image](https://user-images.githubusercontent.com/63274055/146827352-0b939938-4676-4baa-a9b3-888b56f85119.png)
 
 
 
