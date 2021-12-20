@@ -74,7 +74,7 @@ For example in ```sql bank.trans.k_symbol``` and ```sql bank.order.k_symbol```, 
 
 
 <br></br>
-![image](https://user-images.githubusercontent.com/63274055/146808023-340a2ae2-d946-450c-821c-82944ed79460.png)
+
 
 
 
