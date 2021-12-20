@@ -88,10 +88,12 @@ I split all in three different tables to avoid data redundancy referencing distr
 ![image](https://user-images.githubusercontent.com/63274055/146827352-0b939938-4676-4baa-a9b3-888b56f85119.png)
 
 
+<br></br>
+This is the final database schema:
 
+<br></br>
+![image](https://user-images.githubusercontent.com/63274055/146830079-450ee3e1-906f-4721-b6be-91f4fa19a75c.png)
 
-
-.
 
 
 
