@@ -48,7 +48,8 @@ WHERE
 This is the original database bank schema:
 <br></br>
 
-![image](https://user-images.githubusercontent.com/63274055/146789480-b697927e-a6e2-42f7-a76d-aa0e67dfb496.png)
+![image](https://user-images.githubusercontent.com/63274055/146827499-0ac09258-9979-481f-b9a1-62996a43b9fd.png)
+
 <br></br>
 
 
