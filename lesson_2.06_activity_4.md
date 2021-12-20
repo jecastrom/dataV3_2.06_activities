@@ -44,7 +44,39 @@ WHERE
 
 <br></br>
 
-![image](https://user-images.githubusercontent.com/63274055/146738327-10c15009-f1b2-4e39-8a3b-801fea5a69bc.png)
+This is the original database bank schema:
+<br></br>
+
+![image](https://user-images.githubusercontent.com/63274055/146789480-b697927e-a6e2-42f7-a76d-aa0e67dfb496.png)
+<br></br>
+
+
+The following are the improvements I made to the schema:
+
+* Only 1 out of 8 tables had a Primary Key and there are no NOT NULL constrains. This can potencialy allow data duplication.
+To start normalizing the database, I have given every column a Primary Key.
+<br></br>
+![image](https://user-images.githubusercontent.com/63274055/146806057-8ffabf24-4cdf-499f-95ba-cdd7553cb6d4.png)
+<br></br>
+
+* Implemented the use of Foreign Keys which minimises data redundancy as there are many atributes (columns) that are
+and can be used in other tables. Also this avoids having two attributs with the same name.
+For example in ```sql bank.trans.k_symbol``` and ```sql bank.order.k_symbol```, both describle the nature of the transaction, the first its for "transactions" and the second for Direct Debits which in the database are refered as Orders or permanent orders.
+
+* The entity "order" has been renamed to "direct_debit", as it is more meaningful as "order" has a implicit congnotation to orders on a online store.
+
+* As the transaction types are quite extensive on both tables, they have created in a different table and the transacion types and direct debit types are now
+* reffered onto the transactions and direct_debit tables by Foreign Keys.
+
+![transactions and order pic befire and after](https://user-images.githubusercontent.com/63274055/146811466-6816fa48-d011-49ec-9c33-cbb2b4e94904.png)
+
+
+<br></br>
+![image](https://user-images.githubusercontent.com/63274055/146808023-340a2ae2-d946-450c-821c-82944ed79460.png)
+
+
+
+
 .
 
 
