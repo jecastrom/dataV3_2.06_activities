@@ -40,14 +40,17 @@ WHERE
  
       
  
-3. Create the rest of the tables in the `bank` database (at least the `client` and the `card` tables)
+## 3. Create the rest of the tables in the `bank` database (at least the `client` and the `card` tables)
+<br></br>
+### Answer:
+<br></br>
 
 ## 4. Design and create a new database structure. Justify your changes.
   Some ideas include renaming columns to ones that make more sense 
   and, for eg., in the table `district`, adding foreign keys 
   wherever necessary.
-
-# Answer:
+<br></br>
+### Answer:
 <br></br>
 
 This is the original database bank schema:
