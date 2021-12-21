@@ -12,7 +12,10 @@
 
 ## 2. Now use the `bank` database to make the following changes:
 
-      a. Use the insert command to create a new entry in the `loan` table with the following values (8000,8000000,930705,96396,12,8033.0,'C'). Here each element corresponds to the values in columns in the table (in the order the columns appear in the table). This might raise an error. Why is that?
+      a. Use the insert command to create a new entry in the `loan` 
+      table with the following values (8000,8000000,930705,96396,12,8033.0,'C'). 
+      Here each element corresponds to the values in columns in the table (in the 
+      order the columns appear in the table). This might raise an error. Why is that?
 
 
 ```sql
