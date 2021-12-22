@@ -100,7 +100,9 @@ I split all in three different tables to avoid data redundancy referencing distr
 This is the final database schema:
 
 <br></br>
-![image](https://user-images.githubusercontent.com/63274055/146830079-450ee3e1-906f-4721-b6be-91f4fa19a75c.png)
+![image](https://user-images.githubusercontent.com/63274055/147152223-271c2175-a363-4fab-8c19-3b567688d3dd.png)
+[demobank_schema.pdf](https://github.com/jecastrom/dataV3_2.06_activities/files/7765109/demobank_schema.pdf)
+
 <br></br>
 Now, let´s code it out::
 <br></br>
@@ -404,7 +406,11 @@ ADD
     FOREIGN KEY(trans_id) REFERENCES transactions(trans_id) ON DELETE CASCADE;
 ```
 
+After creating the demobank database, this is the ERD from MySQL Workbench:
 
+![image](https://user-images.githubusercontent.com/63274055/147152452-69095f7e-f957-4cf6-8a6d-6f058a622603.png)
+
+[ERD demobank_mysql_schema.pdf](https://github.com/jecastrom/dataV3_2.06_activities/files/7765104/ERD.demobank_mysql_schema.pdf)
 
 
 
