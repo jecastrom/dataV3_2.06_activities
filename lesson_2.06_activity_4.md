@@ -361,7 +361,7 @@ ADD
 ADD
     FOREIGN KEY(bank_id) REFERENCES bank(bank_id) ON DELETE CASCADE;
 
--- Addling foreign keys to table "district"
+-- Adding foreign keys to table "district"
 ALTER TABLE
     district
 ADD
@@ -369,7 +369,7 @@ ADD
 ADD
     FOREIGN KEY(demographics_id) REFERENCES demographics(demographics_id) ON DELETE CASCADE;
 
--- Addling foreign keys to table "card"
+-- Adding foreign keys to table "card"
 ALTER TABLE
     card
 ADD
@@ -379,7 +379,7 @@ ADD
 ADD
     FOREIGN KEY(account_id) REFERENCES account_(account_id) ON DELETE CASCADE;
 
--- Addling foreign keys to table "loan"
+-- Adding foreign keys to table "loan"
 ALTER TABLE
     loan
 ADD
@@ -387,7 +387,7 @@ ADD
 ADD
     FOREIGN KEY(loan_status_id) REFERENCES loan_status(loan_status_id) ON DELETE CASCADE;
 
--- Addling foreign keys to table "direct_debit"
+-- Adding foreign keys to table "direct_debit"
 ALTER TABLE
     direct_debit
 ADD
@@ -397,7 +397,7 @@ ADD
 ADD
     FOREIGN KEY(dd_type_id) REFERENCES direct_debit_type(dd_type_id) ON DELETE CASCADE;
 
--- Addling foreign keys to table "trans_k"
+-- Adding foreign keys to table "trans_k"
 ALTER TABLE
     trans_k
 ADD
