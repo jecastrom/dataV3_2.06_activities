@@ -405,9 +405,9 @@ ALTER TABLE
 ADD
     FOREIGN KEY(trans_id) REFERENCES transactions(trans_id) ON DELETE CASCADE;
 ```
-
+<br></br>
 After creating the demobank database, this is the ERD from MySQL Workbench:
-
+<br></br>
 ![image](https://user-images.githubusercontent.com/63274055/147152452-69095f7e-f957-4cf6-8a6d-6f058a622603.png)
 
 [ERD demobank_mysql_schema.pdf](https://github.com/jecastrom/dataV3_2.06_activities/files/7765104/ERD.demobank_mysql_schema.pdf)
