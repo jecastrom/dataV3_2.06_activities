@@ -359,7 +359,7 @@ CREATE TABLE card (
 -- Table structure for table "loan_status"
 CREATE TABLE loan_status (
 	loan_status_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	loan_status varchar(10) UNIQUE NOT NULL
+	loan_status varchar(10) NOT NULL
 );
 
 -- Table structure for table "loan"
@@ -378,7 +378,7 @@ CREATE TABLE loan (
 -- Table structure for table "direct_debit_type"
 CREATE TABLE direct_debit_type (
 	dd_type_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	dd_type varchar(15) UNIQUE NOT NULL
+	dd_type varchar(15) NOT NULL
 );
 
 -- Table structure for table "direct_debit"
