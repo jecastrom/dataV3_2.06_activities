@@ -127,7 +127,7 @@ WHERE
     A2 REGEXP '^K';
 ```
 
-image::https://user-images.githubusercontent.com/63274055/146674051-f96cd607-6015-460b-a46b-f8653b62a8e2.png[width=600]
+image::https://user-images.githubusercontent.com/63274055/146674051-f96cd607-6015-460b-a46b-f8653b62a8e2.png[width=300]
    
 
 == Find the different values from the field `A2` that end with the letter 'K'.
