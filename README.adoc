@@ -108,7 +108,7 @@ WHERE
     STATUS = 'C';
 ```
 
-image::https://user-images.githubusercontent.com/63274055/146674040-85bb136d-347f-4b76-aa47-f07bc7931814.png[width=300]
+image::https://user-images.githubusercontent.com/63274055/146674040-85bb136d-347f-4b76-aa47-f07bc7931814.png[width=450]
    
 
 == Find the different values from the field `A2` that start with the letter 'K'.
