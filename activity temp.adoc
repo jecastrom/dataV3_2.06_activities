@@ -102,7 +102,7 @@ image::[width=600]
 ''''
 ====
 
-bla bla blafootnote:[fn-xxx]
+bla bla blafootnote:[{fn-xxx}]
 
 xref:XXX-Activity-99-to-99-|-9.99[Top Section]
 
