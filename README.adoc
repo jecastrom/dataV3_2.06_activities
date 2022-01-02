@@ -143,7 +143,7 @@ WHERE
     A2 REGEXP 'K$';
 ```
 
-image::(https://user-images.githubusercontent.com/63274055/146674071-f0a07646-39f2-4089-8cca-dc46892edaa1.png[width=600]
+image::https://user-images.githubusercontent.com/63274055/146674071-f0a07646-39f2-4089-8cca-dc46892edaa1.png[width=600]
 
 
 == Discuss the possible use cases of using regular expressions in your query.
