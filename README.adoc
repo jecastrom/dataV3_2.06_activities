@@ -72,7 +72,7 @@ FROM
     card;
 ```
 
-image::https://user-images.githubusercontent.com/63274055/146673958-3cf79587-6160-458f-bcdb-8c1fb0bfec04.png[width=600]
+image::https://user-images.githubusercontent.com/63274055/146673958-3cf79587-6160-458f-bcdb-8c1fb0bfec04.png[width=200]
 
 
 == Get transactions in the first 15 days of 1993.
