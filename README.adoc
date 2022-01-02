@@ -1,15 +1,15 @@
-= Lab xxxx
+= SQL Activity 1 to 5 | 2.06
 :stylesheet: boot-darkly.css
 :linkcss: boot-darkly.css
 :image-url-ironhack: https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png
 :my-name: Jorge Castro DAPT NOV2021
-:description:
-:script-url: https://github.com/jecastrom/data_2.07_activities/blob/7abfb6a0375c2c4ad3021f3f9a388a495142e1a8/files_for_actitity/act%202.07%20solutions.sql
-:fn-xxx: Add the explanation foot note here bla bla
+:description: SQL queries Activities
+//:script-url: ADD SCRIPT URL HERE 
 :toc:
-:toc-title: Lab description: In this lab, you will....
+:toc-title: Activities | Description: Keep working on the `bank` database and its `card` table.
 :toc-placement!:
 :toclevels: 5
+//:fn-xxx: Add the explanation foot note here bla bla
 ifdef::env-github[]
 :sectnums:
 :tip-caption: :bulb:
@@ -47,7 +47,6 @@ endif::[]
 ifndef::env-github[]
 :imagesdir: ./
 endif::[]
-
 image::{image-url-ironhack}[width=70]
 
 {my-name}
@@ -57,34 +56,118 @@ image::{image-url-ironhack}[width=70]
 ====
 ''''
 ====
-toc::[]
-
 {description}
 
+toc::[]
 
-= Instructions:
-== Question or request.
 
+== Get different card types.
+
+`*_Answer:_*`
+   
+```sql
+SELECT
+    DISTINCT TYPE
+FROM
+    card;
+```
+
+image::https://user-images.githubusercontent.com/63274055/146673958-3cf79587-6160-458f-bcdb-8c1fb0bfec04.png[width=600]
+
+
+== Get transactions in the first 15 days of 1993.
 
 `*_Answer:_*`
 
 ```sql
-
+SELECT
+    *
+FROM
+    trans
+WHERE
+    date BETWEEN 930101
+    AND 930115;
 ```
 
-image::[width=700]
+image::https://user-images.githubusercontent.com/63274055/146674008-ea99725a-ce60-4ee1-8c49-4751ea79e2df.png[width=600]
+
+== Get all running loans.
+
+`*_Answer:_*`
+
+
+    *In the database doc running loans are described as:
+	Status 'C': stands for running contract, OK so far.*
+
+```sql
+SELECT
+    *
+FROM
+    loan
+WHERE
+    STATUS = 'C';
+```
+
+image::https://user-images.githubusercontent.com/63274055/146674040-85bb136d-347f-4b76-aa47-f07bc7931814.png[width=600]
+   
+
+== Find the different values from the field `A2` that start with the letter 'K'.
+
+`*_Answer:_*`
+
+Here we can use the REGEXP (regular expressions) to help with the search 
+of data matching complex criteria*
+
+```sql
+SELECT
+    A2
+FROM
+    district
+WHERE
+    A2 REGEXP '^K';
+```
+
+image::https://user-images.githubusercontent.com/63274055/146674051-f96cd607-6015-460b-a46b-f8653b62a8e2.png[width=600]
+   
+
+== Find the different values from the field `A2` that end with the letter 'K'.
+
+`*_Answer:_*`
+
+```sql
+SELECT
+    A2
+FROM
+    district
+WHERE
+    A2 REGEXP 'K$';
+```
+
+image::(https://user-images.githubusercontent.com/63274055/146674071-f0a07646-39f2-4089-8cca-dc46892edaa1.png[width=600]
+
+
+== Discuss the possible use cases of using regular expressions in your query.
+
+`*_Answer:_*`
+
+*MySQL Regular expressions allow us to search data matching even more complex criterion.*
+
+
+
+
+
+
+
+
+
+
+
+
 
 ====
 ''''
 ====
 
-=== sjhdshds dhsjdh
-==== jksskj
-===== Last section
-
-====
-''''
-====
 
 {script-url}[Solutions script only]
 
@@ -92,14 +175,11 @@ image::[width=700]
 ''''
 ====
 
+// bla bla blafootnote:[{fn-xxx}]
 
+xref:SQL-Activity-1-to-5-|-2.06[Top Section]
 
-
-xref:Lab-xxxx[Top Section]
-
-xref:Last-section[Bottom section]
-
-bla bla blafootnote:[{fn-xxx}]
+// xref:Last-section[Bottom section]
 
 
 ////
