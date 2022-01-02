@@ -60,7 +60,7 @@ image::{image-url-ironhack}[width=70]
 
 toc::[]
 
-
+= Activity
 == Get different card types.
 
 `*_Answer:_*`
