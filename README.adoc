@@ -1,9 +1,9 @@
-= SQL Activity 1 to 5 2.06
+= SQL Activity 1 to 5
 :stylesheet: boot-darkly.css
 :linkcss: boot-darkly.css
 :image-url-ironhack: https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png
 :my-name: Jorge Castro DAPT NOV2021
-:description: SQL queries Activities
+:description: SQL queries Activities 2.06
 //:script-url: ADD SCRIPT URL HERE 
 :toc:
 :toc-title: Activities | Description: Keep working on the `bank` database and its `card` table.
@@ -177,7 +177,7 @@ image::https://user-images.githubusercontent.com/63274055/146674071-f0a07646-39f
 
 // bla bla blafootnote:[{fn-xxx}]
 
-xref:SQL-Activity-1-to-5-2.06[Top Section]
+xref:SQL-Activity-1-to-5[Top Section]
 
 // xref:Last-section[Bottom section]
 
