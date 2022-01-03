@@ -225,7 +225,7 @@ FROM
 WHERE
     a2 REGEXP '^ch';
 ```
-image::https://user-images.githubusercontent.com/63274055/146674925-65d786dc-7d85-4ce5-b5b6-1e3267f91c4b.png[width=200]
+image::https://user-images.githubusercontent.com/63274055/146674925-65d786dc-7d85-4ce5-b5b6-1e3267f91c4b.png[width=600]
 
 
 
