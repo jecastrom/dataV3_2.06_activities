@@ -330,7 +330,6 @@ WHERE
 This is the original database bank schema:
 
 
-![image]()
 
 image:https://user-images.githubusercontent.com/63274055/147342440-cbd7ff8c-3426-4150-b8ef-5539cd6f63ae.png[width=200]
 
