@@ -180,7 +180,7 @@ FROM
 WHERE
     a3 LIKE 'north%M%';
 ```
-image::https://user-images.githubusercontent.com/63274055/146674746-15bb46e0-82a9-4616-a774-27361d4c9eda.png[width=500]
+image::https://user-images.githubusercontent.com/63274055/146674746-15bb46e0-82a9-4616-a774-27361d4c9eda.png[width=600]
 
 
 This query can be used if you are looking for a value which starts with north and has 
