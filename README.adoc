@@ -363,7 +363,7 @@ image:https://user-images.githubusercontent.com/63274055/147275012-8ea140da-a409
 _This is the re-designed database schema:_
 
 
-image:https://user-images.githubusercontent.com/63274055/147394072-96b044c8-8c14-4d1f-acb6-a8ff41a193d4.png[width=200]
+image:https://user-images.githubusercontent.com/63274055/147394072-96b044c8-8c14-4d1f-acb6-a8ff41a193d4.png[width=800]
 
 
 
