@@ -62,6 +62,8 @@ toc::[]
 
 = Activity 1
 == Get different card types.
+xref:SQL-Activity-1-to-5[Go to First Section]
+xref:Design-and-create-a-new-database-structure.-Justify-your-changes.[Go to Last Section]
 
 `*_Answer:_*`
    
@@ -733,7 +735,10 @@ Finally, I have enabled the "on delete cascade" constraint while adding foreign 
 
 // bla bla blafootnote:[{fn-xxx}]
 
-xref:SQL-Activity-1-to-5[Top Section]
+xref:SQL-Activity-1-to-5[Go to First Section]
+xref:Design-and-create-a-new-database-structure.-Justify-your-changes.[Go to Last Section]
+
+Design and create a new database structure. Justify your changes.
 
 // xref:Last-section[Bottom section]
 
