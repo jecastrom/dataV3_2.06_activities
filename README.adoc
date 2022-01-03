@@ -320,6 +320,7 @@ WHERE
 
 
 == Design and create a new database structure. Justify your changes.
+
   Some ideas include renaming columns to ones that make more sense 
   and, for eg., in the table `district`, adding foreign keys 
   wherever necessary.
@@ -331,7 +332,7 @@ This is the original database bank schema:
 
 
 
-image:https://user-images.githubusercontent.com/63274055/147342440-cbd7ff8c-3426-4150-b8ef-5539cd6f63ae.png[width=200]
+image:https://user-images.githubusercontent.com/63274055/147342440-cbd7ff8c-3426-4150-b8ef-5539cd6f63ae.png[width=500]
 
 
 
