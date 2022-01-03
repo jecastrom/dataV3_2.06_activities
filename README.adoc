@@ -63,7 +63,7 @@ toc::[]
 = Activity 1
 == Get different card types.
 xref:SQL-Activity-1-to-5[Go to First Section]
-xref:Design-and-create-a-new-database-structure.-Justify-your-changes.[Go to Last Section]
+xref:Design-and-create-a-new-database-structure-and-justify-your-changes[Go to Last Section]
 
 `*_Answer:_*`
    
@@ -321,7 +321,7 @@ WHERE
 `*_Answer:_*`
 
 
-== Design and create a new database structure. Justify your changes.
+== Design and create a new database structure and Justify your changes
 
   Some ideas include renaming columns to ones that make more sense 
   and, for eg., in the table `district`, adding foreign keys 
@@ -736,7 +736,7 @@ Finally, I have enabled the "on delete cascade" constraint while adding foreign 
 // bla bla blafootnote:[{fn-xxx}]
 
 xref:SQL-Activity-1-to-5[Go to First Section]
-xref:Design-and-create-a-new-database-structure.-Justify-your-changes.[Go to Last Section]
+
 
 Design and create a new database structure. Justify your changes.
 
