@@ -197,7 +197,7 @@ FROM
 WHERE
     a3 LIKE 'north_M%';
 ```
-image::https://user-images.githubusercontent.com/63274055/146674772-4a3ca43e-ce0c-4223-8e7b-2c853b8b307a.png[width=200]
+image::https://user-images.githubusercontent.com/63274055/146674772-4a3ca43e-ce0c-4223-8e7b-2c853b8b307a.png[width=600]
 
 
 
