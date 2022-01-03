@@ -354,7 +354,8 @@ _The table "address" in the previous design did not exist. There was a column ca
 
 _This is how I came up with "phone" and "postcode," which are two distinct things that have a close link to "address." These new fundamental keys can be used in other systems, such as insurance or other services, to minimize data redundancy._
 
-image:https://user-images.githubusercontent.com/63274055/147275012-8ea140da-a409-479f-8690-52fb0d8a5cc1.png[width=200]
+image:https://user-images.githubusercontent.com/63274055/147275012-8ea140da-a409-479f-8690-52fb0d8a5cc1.png[width=800]
+
 
 
 
