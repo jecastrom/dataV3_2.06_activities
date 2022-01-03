@@ -227,6 +227,9 @@ WHERE
 ```
 image::https://user-images.githubusercontent.com/63274055/146674925-65d786dc-7d85-4ce5-b5b6-1e3267f91c4b.png[width=600]
 
+====
+''''
+====
 
 
 Use the table `trans` for this query. Use the column `type` to test: "By default, in an ascending sort, special characters appear first, followed by numbers, and then letters."
