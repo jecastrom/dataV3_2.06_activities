@@ -775,7 +775,6 @@ Finally, I have enabled the "on delete cascade" constraint while adding foreign 
 xref:SQL-Activity-1-to-5[Go to First Section]
 
 
-Design and create a new database structure. Justify your changes.
 
 // xref:Last-section[Bottom section]
 
