@@ -686,8 +686,10 @@ https://github.com/jecastrom/dataV3_2.06_activities/files/7765104/ERD.demobank_m
 
 * To sum it up:
 
+From an initial `8 tables` and `54 columns` database with only `1 primary key`, the new database has:
 
-.From an initial `8 tables` and `54 columns` database with only `1 primary key`, the new database has:
+
+.
 [horizontal]
 Total Tables:: 22
 Total Columns:: 103
