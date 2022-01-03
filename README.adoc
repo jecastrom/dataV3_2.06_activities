@@ -180,7 +180,8 @@ FROM
 WHERE
     a3 LIKE 'north%M%';
 ```
-![image](https://user-images.githubusercontent.com/63274055/146674746-15bb46e0-82a9-4616-a774-27361d4c9eda.png)
+image::https://user-images.githubusercontent.com/63274055/146674746-15bb46e0-82a9-4616-a774-27361d4c9eda.png[width=200]
+
 
 This query can be used if you are looking for a value which starts with north and has 
 a capital M anywhere after north. This is the reason why the query brings back 
