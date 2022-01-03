@@ -345,6 +345,10 @@ WHERE
 
 `*_Answer:_*`
 
+xref:SQL-Activity-1-to-5[Go to First Section]
+
+xref:Design-and-create-a-new-database-structure-and-justify-your-changes[Go to Last Section]
+
 
 == Design and create a new database structure and Justify your changes
 
