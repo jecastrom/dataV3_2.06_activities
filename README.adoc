@@ -344,7 +344,7 @@ _The following are the improvements I made to the schema and I will focus on 3 t
 _I split the table into three different entities: *district, region and demographics*. This helps to reference the same information in various places in the database, such as addresses, loans etc. This complies with the 2dn Normal Form (2NF). Each table has a Primary key that uniquely identifies the rows to achieve Referential Integrity._
 
 
-image:https://user-images.githubusercontent.com/63274055/147267804-aa3e62fe-b440-4cd6-9ee6-e59e2f8e711e.png[width=200]
+image:https://user-images.githubusercontent.com/63274055/147267804-aa3e62fe-b440-4cd6-9ee6-e59e2f8e711e.png[width=800]
 
 * Tables `client` and `disp`:   
 
