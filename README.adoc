@@ -372,6 +372,7 @@ https://github.com/jecastrom/data_2.06_activities/files/7767861/demobank_new_sch
 
 
 * Coding the new schema
+
 Now, let´s code it out:
 
 
