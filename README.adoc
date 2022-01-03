@@ -96,8 +96,7 @@ image::https://user-images.githubusercontent.com/63274055/146674008-ea99725a-ce6
 `*_Answer:_*`
 
 
-In the database doc running loans are described as:
-Status 'C': stands for running contract, OK so far.*
+_In the database doc running loans are described as: Status 'C': stands for running contract, OK so far._
 
 ```sql
 SELECT
@@ -115,8 +114,7 @@ image::https://user-images.githubusercontent.com/63274055/146674040-85bb136d-347
 
 `*_Answer:_*`
 
-Here we can use the REGEXP (regular expressions) to help with the search 
-of data matching complex criteria*
+_Here we can use the REGEXP (regular expressions) to help with the search of data matching complex criteria_
 
 ```sql
 SELECT
@@ -150,7 +148,7 @@ image::https://user-images.githubusercontent.com/63274055/146674071-f0a07646-39f
 
 `*_Answer:_*`
 
-*MySQL Regular expressions allow us to search data matching even more complex criterion.*
+_MySQL Regular expressions allow us to search data matching even more complex criterion._
 
 = Activity 2
 
@@ -183,10 +181,7 @@ WHERE
 image::https://user-images.githubusercontent.com/63274055/146674746-15bb46e0-82a9-4616-a774-27361d4c9eda.png[width=600]
 
 
-This query can be used if you are looking for a value which starts with north and has 
-a capital M anywhere after north. This is the reason why the query brings back 
-Noth Bohamia and North Moravia. The % allows you to match any string of any length
-including cero length*
+_This query can be used if you are looking for a value which starts with north and has a capital M anywhere after north. This is the reason why the query brings back Noth Bohamia and North Moravia. The % allows you to match any string of any length including cero length_
 
 
 ```sql
@@ -201,9 +196,7 @@ image::https://user-images.githubusercontent.com/63274055/146674772-4a3ca43e-ce0
 
 
 
-_This query is more granular asking for a value that
-matches north and only one character or anything of the sort but only one
-then a value that starts with capital M and any character after._
+_This query is more granular asking for a value that matches north and only one character or anything of the sort but only one then a value that starts with capital M and any character after._
 
 
 
@@ -250,9 +243,7 @@ The students can refer to the following link to read more about normalization, i
 `*_Answer:_*`
 
 
-_When several instances of the same data are scattered across different tables without proper 
-relationship/link, it can cause strange conditions where some will get updated with new values 
-whereas others won't. This leaves our database in an inconsistent state!_
+_When several instances of the same data are scattered across different tables without proper relationship/link, it can cause strange conditions where some will get updated with new values whereas others won't. This leaves our database in an inconsistent state!_
 
 
 Later in the labs we will use another database that models a DVD rental store. ERD (entity relationship diagram) for the database is shown below. You can refer the file `sakila-schema.pdf` in the files_for_activities folder as well.
@@ -278,6 +269,437 @@ https://github.com/jecastrom/dataV3_2.06_activities/files/7741626/Sakila.Primary
 
 https://github.com/jecastrom/dataV3_2.06_activities/files/7741627/Sakila.Foreign.Keys.pdf[Sakila Foreign Keys.pdf]
 
+
+= Activity 4
+
+== Check if referential integrity is followed in the following tables
+
+
+
+image:https://user-images.githubusercontent.com/63274055/147394013-71387c27-a53e-44c3-b61c-3f72c177dd82.png[width=540]
+
+`*_Answer:_*`
+
+_Referential integrity is a set of rules that ensures that table relationships are consistent. Because each database table must have a primary key, it may appear in other tables as a result of its connection to data within those tables. A foreign key is one type of relationship between tables. In this case the rule is being followed as the CompanyID is being refereed on the InsuranceCompany table as a foreign key._
+
+
+
+== Now use the `bank` database to make the following changes:
+
+* Use the insert command to create a new entry in the `loan` table with the following values (8000,8000000,930705,96396,12,8033.0,'C'). Here each element corresponds to the values in columns in the table (in the 
+order the columns appear in the table). This might raise an error. Why is that?
+
+`Answer:`
+
+```sql
+INSERT INTO
+    loan
+VALUES
+    (8000, 8000000, 930705, 96396, 12, 8033.0, 'C');
+```
+_I was able to insert the values successfully._
+
+
+* Use the delete command to delete an entry from the table account where the `account_id` is `11382`. Does 
+this result in an error? If it does, then why?
+
+`*_Answer:_*`
+
+```sql
+DELETE FROM
+    account
+WHERE
+    account_id = 11382;
+```
+ 
+      
+ 
+== Create the rest of the tables in the `bank` database (at least the `client` and the `card` tables)
+
+`*_Answer:_*`
+
+
+== Design and create a new database structure. Justify your changes.
+  Some ideas include renaming columns to ones that make more sense 
+  and, for eg., in the table `district`, adding foreign keys 
+  wherever necessary.
+
+`*_Answer:_*`
+
+
+This is the original database bank schema:
+
+
+![image]()
+
+image:https://user-images.githubusercontent.com/63274055/147342440-cbd7ff8c-3426-4150-b8ef-5539cd6f63ae.png[width=200]
+
+
+
+
+_The following are the improvements I made to the schema and I will focus on 3 tables examples:_
+
+* Table *'district'*
+
+_I split the table into three different entities: *district, region and demographics*. This helps to reference the same information in various places in the database, such as addresses, loans etc. This complies with the 2dn Normal Form (2NF). Each table has a Primary key that uniquely identifies the rows to achieve Referential Integrity._
+
+
+image:https://user-images.githubusercontent.com/63274055/147267804-aa3e62fe-b440-4cd6-9ee6-e59e2f8e711e.png[width=200]
+
+* Tables `client` and `disp`:   
+
+_As you can see, the structure in this part of the database is a little bit messy. Let's look at what happened to the "client" and "district" tables when we removed them from the prior schema: -The original table has a virtual connection between it, the tables "client," "district," and the table "disp," but not reinforced in the database design. There were no primary keys or foreign key references. The name of this table was changed to "client_status" for clarity._
+
+_The table "address" in the previous design did not exist. There was a column called "district_id" in the "client" table, but there was no foreign key. This table holds customer addresses as well as any other addresses, such as Branch addresses or other banks' addresses._
+
+_This is how I came up with "phone" and "postcode," which are two distinct things that have a close link to "address." These new fundamental keys can be used in other systems, such as insurance or other services, to minimize data redundancy._
+
+image:https://user-images.githubusercontent.com/63274055/147275012-8ea140da-a409-479f-8690-52fb0d8a5cc1.png[width=200]
+
+
+
+
+_This is the re-designed database schema:_
+
+
+image:https://user-images.githubusercontent.com/63274055/147394072-96b044c8-8c14-4d1f-acb6-a8ff41a193d4.png[width=200]
+
+
+
+https://github.com/jecastrom/data_2.06_activities/files/7767861/demobank_new_schema.pdf[Demobank new schema]
+
+
+
+* Coding the new schema
+Now, let´s code it out:
+
+
+
+```sql
+DROP schema IF EXISTS demobank;
+
+CREATE schema demobank;
+
+USE demobank;
+
+-- Table structure for table "bank"
+CREATE TABLE bank (
+	bank_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	bank_code varchar(2) NOT NULL,
+	bank_name varchar(20) NOT NULL
+);
+
+-- Table structure for table "branch"
+CREATE TABLE branch (
+	branch_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	branch varchar(20),
+	address_id int UNSIGNED NOT NULL,
+	district_id int UNSIGNED NOT NULL,
+	region_id int UNSIGNED NOT NULL
+);
+
+-- Table structure for table "phone"
+CREATE TABLE phone (
+	phone_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	phone_1 varchar(15) NOT NULL,
+	phone_2 varchar(15)
+);
+
+-- Table structure for table "client_"
+CREATE TABLE client_ (
+	client_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	dob date NOT NULL,
+	district_id int UNSIGNED NOT NULL,
+	first_name text(20) NOT NULL,
+	last_name text(20) NOT NULL,
+	address_id int UNSIGNED NOT NULL,
+	client_status_id int UNSIGNED NOT NULL,
+	phone_id int UNSIGNED NOT NULL,
+	gender text(1) NOT NULL
+);
+
+-- Table structure for table "postcode"
+CREATE TABLE postcode (
+	postcode_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	postcode varchar(5) NOT NULL
+);
+
+-- Table structure for table "region"
+CREATE TABLE region (
+	region_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	region varchar(20) NOT NULL
+);
+
+-- Table structure for table "district"
+CREATE TABLE district (
+	district_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	district varchar(20) NOT NULL,
+	region_id int UNSIGNED NOT NULL,
+	demographics_id int UNSIGNED NOT NULL
+);
+
+-- Table structure for table "client_status"
+CREATE TABLE client_status (
+	client_status_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	client_status varchar(15) NOT NULL
+);
+
+-- Table structure for table "address"
+CREATE TABLE address (
+	address_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	address varchar(50) NOT NULL,
+	district_id int UNSIGNED NOT NULL,
+	region_id int UNSIGNED NOT NULL,
+	postcode_id int UNSIGNED NOT NULL
+);
+
+-- Table structure for table "frequency"
+CREATE TABLE frequency (
+	frequency_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	frequency varchar(10) NOT NULL
+);
+
+-- Table structure for table "account"
+CREATE TABLE account_ (
+	account_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	district_id int UNSIGNED NOT NULL,
+	frequency_id int UNSIGNED NOT NULL,
+	client_id int UNSIGNED NOT NULL,
+	branch_id int UNSIGNED NOT NULL,
+	opening_date datetime NOT NULL,
+	account_balance decimal(15, 2) NOT NULL
+);
+
+-- Table structure for table "trans_type"
+CREATE TABLE trans_type (
+	trans_type_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	trans_type char(10) NOT NULL
+);
+
+-- Table structure for table "operation"
+CREATE TABLE operation (
+	operation_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	operation varchar(15) NOT NULL
+);
+
+-- Table structure for table "trans_k"
+CREATE TABLE trans_k (
+	trans_k_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	trans_k varchar(15) NOT NULL,
+	trans_id int UNSIGNED NOT NULL
+);
+
+-- Table structure for table "transactions"
+CREATE TABLE transactions (
+	trans_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	account_id int UNSIGNED NOT NULL,
+	trans_date datetime NOT NULL,
+	trans_type_id int UNSIGNED NOT NULL,
+	operation_id int UNSIGNED NOT NULL,
+	trans_amount decimal(15, 2) NOT NULL,
+	balance decimal(15, 5) NOT NULL,
+	trans_k_id int UNSIGNED NOT NULL,
+	bank_id int UNSIGNED NOT NULL,
+	account_number varchar(50) NOT NULL
+);
+
+-- Table structure for table "demographics"
+CREATE TABLE demographics (
+	demographics_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	a4_id int UNSIGNED NOT NULL,
+	a5_id int UNSIGNED NOT NULL,
+	a6_id int UNSIGNED NOT NULL,
+	a7_id int UNSIGNED NOT NULL,
+	a8_id int UNSIGNED NOT NULL,
+	a9_id int UNSIGNED NOT NULL,
+	a10_id int UNSIGNED NOT NULL,
+	a11_id int UNSIGNED NOT NULL,
+	a12_id int UNSIGNED NOT NULL,
+	a13_id int UNSIGNED NOT NULL,
+	a14_id int UNSIGNED NOT NULL,
+	a15_id int UNSIGNED NOT NULL,
+	a16_id int UNSIGNED NOT NULL
+);
+
+-- Table structure for table "card_type"
+CREATE TABLE card_type (
+	card_type_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	card_type varchar(10) NOT NULL
+);
+
+-- Table structure for table "card"
+CREATE TABLE card (
+	card_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	client_status_id int UNSIGNED NOT NULL,
+	card_type_id int UNSIGNED NOT NULL,
+	card_issued_date date,
+	account_id int UNSIGNED NOT NULL,
+	card_exp_date date NOT NULL
+) AUTO_INCREMENT = 4966380000000000;
+
+-- Table structure for table "loan_status"
+CREATE TABLE loan_status (
+	loan_status_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	loan_status varchar(10) UNIQUE NOT NULL
+);
+
+-- Table structure for table "loan"
+CREATE TABLE loan (
+	loan_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	account_id int UNSIGNED NOT NULL,
+	loan_start_date date NOT NULL,
+	loan_amount decimal(15, 2) UNSIGNED NOT NULL,
+	loan_term smallint UNSIGNED NOT NULL,
+	loan_installments decimal(15, 2) UNSIGNED NOT NULL,
+	loan_status_id int UNSIGNED NOT NULL,
+	loan_interest_rate decimal(15, 2) UNSIGNED NOT NULL,
+	loan_balance decimal(15, 2) UNSIGNED NOT NULL
+);
+
+-- Table structure for table "direct_debit_type"
+CREATE TABLE direct_debit_type (
+	dd_type_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	dd_type varchar(15) UNIQUE NOT NULL
+);
+
+-- Table structure for table "direct_debit"
+CREATE TABLE direct_debit (
+	dd_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	account_id int UNSIGNED NOT NULL,
+	bank_id int UNSIGNED NOT NULL,
+	account_to varchar(50) NOT NULL,
+	dd_amount decimal(15, 2) NOT NULL,
+	dd_type_id int UNSIGNED NOT NULL,
+	dd_date datetime NOT NULL
+);
+
+-- Adding foreign keys to table "branch" 
+ALTER TABLE
+	branch
+ADD
+	FOREIGN KEY(address_id) REFERENCES address(address_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(district_id) REFERENCES district(district_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(region_id) REFERENCES region(region_id) ON DELETE CASCADE;
+
+-- Adding foreign keys to table "address" 
+ALTER TABLE
+	address
+ADD
+	FOREIGN KEY(district_id) REFERENCES district(district_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(region_id) REFERENCES region(region_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(postcode_id) REFERENCES postcode(postcode_id) ON DELETE CASCADE;
+
+-- Adding foreign keys to table "client_"
+ALTER TABLE
+	client_
+ADD
+	FOREIGN KEY(district_id) REFERENCES district(district_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(address_id) REFERENCES address(address_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(client_status_id) REFERENCES client_status(client_status_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(phone_id) REFERENCES phone(phone_id) ON DELETE CASCADE;
+
+-- Adding foreign keys to table "account_"
+ALTER TABLE
+	account_
+ADD
+	FOREIGN KEY(district_id) REFERENCES district(district_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(frequency_id) REFERENCES frequency(frequency_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(client_id) REFERENCES client_(client_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(branch_id) REFERENCES branch(branch_id) ON DELETE CASCADE;
+
+-- Adding foreign keys to table "transactions"
+ALTER TABLE
+	transactions
+ADD
+	FOREIGN KEY(account_id) REFERENCES account_(account_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(trans_type_id) REFERENCES trans_type(trans_type_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(operation_id) REFERENCES operation(operation_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(trans_k_id) REFERENCES trans_k(trans_k_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(bank_id) REFERENCES bank(bank_id) ON DELETE CASCADE;
+
+-- Addling foreign keys to table "district"
+ALTER TABLE
+	district
+ADD
+	FOREIGN KEY(region_id) REFERENCES region(region_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(demographics_id) REFERENCES demographics(demographics_id) ON DELETE CASCADE;
+
+-- Addling foreign keys to table "card"
+ALTER TABLE
+	card
+ADD
+	FOREIGN KEY(client_status_id) REFERENCES client_status(client_status_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(card_type_id) REFERENCES card_type(card_type_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(account_id) REFERENCES account_(account_id) ON DELETE CASCADE;
+
+-- Addling foreign keys to table "loan"
+ALTER TABLE
+	loan
+ADD
+	FOREIGN KEY(account_id) REFERENCES account_(account_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(loan_status_id) REFERENCES loan_status(loan_status_id) ON DELETE CASCADE;
+
+-- Addling foreign keys to table "direct_debit"
+ALTER TABLE
+	direct_debit
+ADD
+	FOREIGN KEY(bank_id) REFERENCES bank(bank_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(account_id) REFERENCES account_(account_id) ON DELETE CASCADE,
+ADD
+	FOREIGN KEY(dd_type_id) REFERENCES direct_debit_type(dd_type_id) ON DELETE CASCADE;
+
+-- Addling foreign keys to table "trans_k"
+ALTER TABLE
+	trans_k
+ADD
+	FOREIGN KEY(trans_id) REFERENCES transactions(trans_id) ON DELETE CASCADE;
+```
+
+_After creating the demobank database, this is the ERD from MySQL Workbench:_
+
+image:https://user-images.githubusercontent.com/63274055/147152452-69095f7e-f957-4cf6-8a6d-6f058a622603.png[width=200]
+
+https://github.com/jecastrom/dataV3_2.06_activities/files/7765104/ERD.demobank_mysql_schema.pdf[Click here to download the demobank ERD from mySQL Workbench]
+
+
+
+* To sum it up:
+
+_From an inicial 8 tables and 54 columns database with only 1 primary key, the new database has:_
+
+
+_Total Tables: 22_             
+_Total Columns: 103_            
+_Total Primary keys: 22_            
+_Total Foreign Keys: 30_                   
+_Added extra columns: 49_
+
+There were tables and columns with reserved MySQL keywords: _order, transaction, account, client, date, type_ which were changed for alternatives. The 1NF is being violated at the "frequency" table. I established a new table called "frequency." Their records in this table are not unique because there are two values: the frequency or how often consumers receive statements of account and the account fee charge.  
+
+By creating different tables to distinguish values not related to the primary key, you can enforce the 2NF (second normal form). Also, by establishing connections between tables and maintaining foreign keys, you can ensure data integrity and compliance with the 3NF (third normal form).    
+
+To store dates, I used the DATE AND DATETIME data types rather than the integer data type. For greater precision when dealing with amounts of money, use a decimal (15,2). To ensure that non-positive integers are used, set the attribute "unsigned" to each primary key.    
+
+Finally, I have enabled the "on delete cascade" constraint while adding foreign keys. This will allow us to completely remove a record, and all of the dependent foreign keys will be removed as well. For the purpose of data migration to this database, it is advised that you first create a database with no constraints, migrate the data, then set up primary and foreign keys to reduce concerns when bringing the data for tables.
 
 
 
